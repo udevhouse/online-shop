@@ -8,13 +8,29 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    // 訂購 首頁
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/',
+      name: 'home',
+      component: () => import('./views/Home.vue')
+    },
+    // 購物車 權限
+    {
+      path: '/cart',
+      name: 'cart',
+      component: () => import('./views/carts/index.vue')
+    },
+    // 我的訂單 權限
+    {
+      path: '/orders',
+      name: 'orders',
+      component: () => import('./views/orders/index.vue')
     }
+    // 更多 權限
+    // {
+    //   path: '/memberCard',
+    //   name: 'memberCard',
+    //   component: () => import('./views/MemberCard.vue')
+    // }
   ]
 })
