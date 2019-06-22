@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <el-container>
-      <el-header>
+      <el-header height="70px">
         <Navbar></Navbar>
       </el-header>
-      <el-main>
+      <el-main class="main">
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -20,5 +20,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+ .main{
+   background: #F2F1F4;
+   min-height: calc(100vh - 60px);
+ }
 </style>
