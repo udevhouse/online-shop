@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="18" class="logo">
         <div class="navbar__wrap">
-          <img class="navbar__wrap--img" src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/brand/logos/milkshop_nidin_logo.png" alt="" >
+          <el-image class="navbar__wrap--img" src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/brand/logos/milkshop_nidin_logo.png" alt="" ></el-image>
           <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
             <el-menu-item index="1">訂購</el-menu-item>
             <el-menu-item index="2">
@@ -55,6 +55,8 @@ export default {
     align-items: center;
     &--img{
       margin-right: 20px;
+      height: 36px;
+      width: 120px;
     }
     &--icon{
       height: 36px;
@@ -68,8 +70,5 @@ export default {
       border-bottom: 0;
     }
   }
-}
-.logo img {
-  height: 36px;
 }
 </style>
