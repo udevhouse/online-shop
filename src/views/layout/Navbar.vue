@@ -1,10 +1,9 @@
 <template>
   <header class="navbar">
     <el-row>
-      <el-col :span="12" class="logo">
+      <el-col :span="18" class="logo">
         <div class="navbar__wrap">
-
-          <img src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/brand/logos/milkshop_nidin_logo.png" alt="" >
+          <img class="navbar__wrap--img" src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/brand/logos/milkshop_nidin_logo.png" alt="" >
           <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
             <el-menu-item index="1">訂購</el-menu-item>
             <el-menu-item index="2">
@@ -15,7 +14,15 @@
           </el-menu>
         </div>
       </el-col>
-      <el-col :span="12"></el-col>
+      <el-col :span="6">
+        <div class="navbar__wrap">
+          <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+            <el-menu-item index="5">通知</el-menu-item>
+            <el-menu-item index="6">登出</el-menu-item>
+          </el-menu>
+          <el-image class="navbar__wrap--icon" src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/brand/logos/milkshop_nidin_logo.png"></el-image>
+        </div>
+      </el-col>
     </el-row>
   </header>
 </template>
@@ -46,6 +53,20 @@ export default {
   &__wrap{
     display: flex;
     align-items: center;
+    &--img{
+      margin-right: 20px;
+    }
+    &--icon{
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      margin-left: 15px;
+    }
+    /deep/ .el-menu-item.is-active{
+    }
+    /deep/ .el-menu--horizontal{
+      border-bottom: 0;
+    }
   }
 }
 .logo img {
