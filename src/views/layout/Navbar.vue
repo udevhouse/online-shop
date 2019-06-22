@@ -7,7 +7,9 @@
           <img src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/brand/logos/milkshop_nidin_logo.png" alt="" >
           <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
             <el-menu-item index="1">訂購</el-menu-item>
-            <el-menu-item index="2">購物車</el-menu-item>
+            <el-menu-item index="2">
+              <router-link to="/cart">購物車</router-link>
+            </el-menu-item>
             <el-menu-item index="3">我的訂單</el-menu-item>
             <el-menu-item index="4">更多</el-menu-item>
           </el-menu>
