@@ -7,7 +7,7 @@
           <banner></banner>
         </el-col>
         <el-col :span="12">
-          123
+          <search></search>
         </el-col>
       </el-row>
     </div>
@@ -17,12 +17,14 @@
 <script>
 import Operate from '@/views/home/components/Operate'
 import Banner from '@/views/home/components/Banner'
+import Search from '@/views/home/components/Search'
 
 export default {
   name: 'home',
   components: {
     Operate,
-    Banner
+    Banner,
+    Search
   }
 }
 </script>
