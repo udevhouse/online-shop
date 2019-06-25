@@ -7,7 +7,7 @@
             </div>
             <div class="operate__card__item" style="margin-right:20px">
                 <div class="operate__card__item__btn">
-                    <i class="el-icon-cold-drink operate__card__item__btn--icon"></i>
+                    <i class="el-icon-ice-drink operate__card__item__btn--icon"></i>
                     <p class="operate__card__item__btn--text">訂購</p>
                 </div>
                 <div class="operate__card__item__btn">
