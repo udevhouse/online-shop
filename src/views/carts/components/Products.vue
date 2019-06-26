@@ -1,6 +1,9 @@
 <template>
   <el-row :gutter="20">
-    <el-col :span="6" @click="handleClickOrder">
+    <el-col
+      v-for="item in productsData"
+      :key="item.id"
+      :span="6" @click="handleClickOrder">
       <el-card class="box-card">
         <div slot="header" class="clearfix">
           <div class="img">
@@ -13,131 +16,11 @@
                 class="el-icon-delete-solid"
                 @click="handleTrash"></i>
           </div>
-          <h5>迷客夏 - 龍井區</h5>
+          <h5>{{ item.shopName }} - {{ item.address }}</h5>
         </div>
         <div class="card-item">
-          <p>1 項商品共 50 元</p>
-          <p>2019-06-22 17:19 </p>
-        </div>
-      </el-card>
-    </el-col>
-    <el-col :span="6" @click="handleClickOrder">
-      <el-card class="box-card">
-        <div slot="header" class="clearfix">
-          <div class="img">
-            <el-image
-              style="max-width: 70px; width: 70px; height: 70px; border-radius: 6px;"
-              src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/store/icons/b_2_icon_20190426_100408_59867.png"
-              fit="fill"></el-image>
-              <i
-                style="float: right; padding: 3px 0; color: #db4d6d;"
-                class="el-icon-delete-solid"></i>
-          </div>
-          <h5>迷客夏 - 龍井區</h5>
-        </div>
-        <div class="card-item">
-          <p>1 項商品共 50 元</p>
-          <p>2019-06-22 17:19 </p>
-        </div>
-      </el-card>
-    </el-col>
-    <el-col :span="6" @click="handleClickOrder">
-      <el-card class="box-card">
-        <div slot="header" class="clearfix">
-          <div class="img">
-            <el-image
-              style="max-width: 70px; width: 70px; height: 70px; border-radius: 6px;"
-              src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/store/icons/b_2_icon_20190426_100408_59867.png"
-              fit="fill"></el-image>
-              <i
-                style="float: right; padding: 3px 0; color: #db4d6d;"
-                class="el-icon-delete-solid"></i>
-          </div>
-          <h5>迷客夏 - 龍井區</h5>
-        </div>
-        <div class="card-item">
-          <p>1 項商品共 50 元</p>
-          <p>2019-06-22 17:19 </p>
-        </div>
-      </el-card>
-    </el-col>
-    <el-col :span="6" @click="handleClickOrder">
-      <el-card class="box-card">
-        <div slot="header" class="clearfix">
-          <div class="img">
-            <el-image
-              style="max-width: 70px; width: 70px; height: 70px; border-radius: 6px;"
-              src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/store/icons/b_2_icon_20190426_100408_59867.png"
-              fit="fill"></el-image>
-              <i
-                style="float: right; padding: 3px 0; color: #db4d6d;"
-                class="el-icon-delete-solid"></i>
-          </div>
-          <h5>迷客夏 - 龍井區</h5>
-        </div>
-        <div class="card-item">
-          <p>1 項商品共 50 元</p>
-          <p>2019-06-22 17:19 </p>
-        </div>
-      </el-card>
-    </el-col>
-    <el-col :span="6" @click="handleClickOrder">
-      <el-card class="box-card">
-        <div slot="header" class="clearfix">
-          <div class="img">
-            <el-image
-              style="max-width: 70px; width: 70px; height: 70px; border-radius: 6px;"
-              src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/store/icons/b_2_icon_20190426_100408_59867.png"
-              fit="fill"></el-image>
-              <i
-                style="float: right; padding: 3px 0; color: #db4d6d;"
-                class="el-icon-delete-solid"></i>
-          </div>
-          <h5>迷客夏 - 龍井區</h5>
-        </div>
-        <div class="card-item">
-          <p>1 項商品共 50 元</p>
-          <p>2019-06-22 17:19 </p>
-        </div>
-      </el-card>
-    </el-col>
-    <el-col :span="6" @click="handleClickOrder">
-      <el-card class="box-card">
-        <div slot="header" class="clearfix">
-          <div class="img">
-            <el-image
-              style="max-width: 70px; width: 70px; height: 70px; border-radius: 6px;"
-              src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/store/icons/b_2_icon_20190426_100408_59867.png"
-              fit="fill"></el-image>
-              <i
-                style="float: right; padding: 3px 0; color: #db4d6d;"
-                class="el-icon-delete-solid"></i>
-          </div>
-          <h5>迷客夏 - 龍井區</h5>
-        </div>
-        <div class="card-item">
-          <p>1 項商品共 50 元</p>
-          <p>2019-06-22 17:19 </p>
-        </div>
-      </el-card>
-    </el-col>
-    <el-col :span="6" @click="handleClickOrder">
-      <el-card class="box-card">
-        <div slot="header" class="clearfix">
-          <div class="img">
-            <el-image
-              style="max-width: 70px; width: 70px; height: 70px; border-radius: 6px;"
-              src="https://s3-ap-northeast-1.amazonaws.com/nidin-production/store/icons/b_2_icon_20190426_100408_59867.png"
-              fit="fill"></el-image>
-              <i
-                style="float: right; padding: 3px 0; color: #db4d6d;"
-                class="el-icon-delete-solid"></i>
-          </div>
-          <h5>迷客夏 - 龍井區</h5>
-        </div>
-        <div class="card-item">
-          <p>1 項商品共 50 元</p>
-          <p>2019-06-22 17:19 </p>
+          <p>{{ item.orderItem.count }} 項商品共 {{ item.orderItem.price }} 元</p>
+          <p>{{ item.orderItem.date }}</p>
         </div>
       </el-card>
     </el-col>
@@ -156,10 +39,13 @@
 <script>
 export default {
   name: 'Products',
+  props: {
+    productsData: Array
+  },
   data () {
     return {
       dialogVisible: false
-    };
+    }
   },
   methods: {
     handleClickOrder () {
